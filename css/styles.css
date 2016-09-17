@@ -58,7 +58,7 @@ ul {
 .bg-red { background: #EF233C; }
 
 
-.hairline { font-family: 'Bungee Hairline', sans-serif; }
+.hairline {  }
 
 .no-mar { margin: 0; }
 .no-line { text-decoration: none; }
@@ -150,12 +150,12 @@ ul {
   left: 50%;
 }
 
-.headline-content h2 {
-  font-size: 42px;
-}
-
-  .name {
+  .headline-content h2 {
     margin: 0;
-    font-size: 110px;
-    font-family: 'Bungee Shade', cursive;
+    font: 4.2em 'Bungee Hairline', sans-serif;
+  }
+
+  .headline-content h1 {
+    margin: 0;
+    font: 11em 'Bungee Shade', cursive;
   }
