@@ -17,9 +17,9 @@ body {
   margin: 0;
   height: 100%;
   font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Cousine', monospace;
   box-sizing: border-box;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 nav a {
@@ -134,7 +134,7 @@ SPECIFIC STYLES
 }
 
 .navbar a {
-  padding: 2rem 4rem;
+  padding: 2rem 3.5rem;
   display: block;
 }
 
