@@ -1,0 +1,161 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  line-height: 1.3;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2B2D42;
+}
+
+h2 {
+  font-size: 3.6em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+
+/* --- Clearfix --- */
+
+.cf:after {
+    content:" ";
+    display:block;
+    clear:both;
+}
+
+
+/* --- Repeated styles --- */
+
+.tile {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.white { color: #F1F1F1; }
+.bg-white {background: #F1F1F1;}
+
+.light-gray { color: #EDF2F4; }
+.bg-light-gray { background: #EDF2F4; }
+
+.gray { color: #8D99AE; }
+.bg-gray {background: #8D99AE;}
+
+.black { color: #2B2D42; }
+.bg-black { background: #2B2D42; }
+
+.red { color: #EF233C; }
+.bg-red { background: #EF233C; }
+
+
+.hairline { font-family: 'Bungee Hairline', sans-serif; }
+
+.no-mar { margin: 0; }
+.no-line { text-decoration: none; }
+.body-copy-size { font-size: 20px; }
+.center { text-align: center; }
+
+/* ---------------------- */
+
+
+/* --- Fixed border --- */
+
+.border {
+  /* Border color is on line 29 */
+  background: #2B2D42;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.border-top, .border-bottom {
+  left: 0; right: 0;
+  height: 1em;
+}
+.border-top { top: 0; }
+.border-bottom { bottom: 0; }
+
+.border-left, .border-right {
+  top: 0; bottom: 0;
+  width: 1em;
+}
+.border-left { left: 0; }
+.border-right { right: 0; }
+
+
+
+
+.main {
+  /*z-index: 1;*/
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  max-width: 750px;
+  display: inline-block;
+}
+
+.navbar {
+  margin: 1.5em auto 0;
+  display: block;
+  text-align: center;
+  font-size: 2.4em;
+}
+
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .navbar li {
+    float: left;
+  }
+
+  .navbar a {
+    padding: 0.5em 2.5em;
+    display: block;
+  }
+
+    .navbar a:hover {
+      color: #F1F1F1;
+      background: #EF233C;
+      border-radius: 5px;
+    }
+
+.headline-content {
+  transform: translate(-50%, -67%);
+  position: absolute;
+  width: 100%;
+  top: 33%;
+  left: 50%;
+}
+
+.headline-content h2 {
+  font-size: 42px;
+}
+
+  .name {
+    margin: 0;
+    font-size: 110px;
+    font-family: 'Bungee Shade', cursive;
+  }
