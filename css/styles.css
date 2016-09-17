@@ -1,10 +1,22 @@
+/*----------------------
+GLOBAL STYLES
+----------------------*/
+
+/* ------ Global tags ------ */
+
+* {
+  box-sizing: border-box;
+}
+
 html {
+  height: 100%;
   font-size: 10px;
 }
 
 body {
   margin: 0;
-  font-size: 1em;
+  height: 100%;
+  font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
   line-height: 1.3;
@@ -16,7 +28,7 @@ nav a {
 }
 
 h2 {
-  font-size: 3.6em;
+  font-size: 3.6rem;
 }
 
 ul {
@@ -24,17 +36,7 @@ ul {
 }
 
 
-
-/* --- Clearfix --- */
-
-.cf:after {
-    content:" ";
-    display:block;
-    clear:both;
-}
-
-
-/* --- Repeated styles --- */
+/* ------ Repeated styles ------ */
 
 .tile {
   width: 100%;
@@ -52,21 +54,35 @@ ul {
 .bg-gray {background: #8D99AE;}
 
 .black { color: #2B2D42; }
-.bg-black { background: #2B2D42; }
+.bg-black {background: #2B2D42; }
 
 .red { color: #EF233C; }
 .bg-red { background: #EF233C; }
-
-
-.hairline {  }
 
 .no-mar { margin: 0; }
 .no-line { text-decoration: none; }
 .body-copy-size { font-size: 20px; }
 .center { text-align: center; }
 
-/* ---------------------- */
 
+/* --- Clearfix --- */
+
+.cf:after {
+    content:" ";
+    display:block;
+    clear:both;
+}
+
+
+/*----------------------
+SPECIFIC STYLES
+----------------------*/
+
+/* --- Container for page --- */
+
+.page {
+  height: 100%;
+}
 
 /* --- Fixed border --- */
 
@@ -81,81 +97,86 @@ ul {
 
 .border-top, .border-bottom {
   left: 0; right: 0;
-  height: 1em;
+  height: 1rem;
 }
 .border-top { top: 0; }
 .border-bottom { bottom: 0; }
 
 .border-left, .border-right {
   top: 0; bottom: 0;
-  width: 1em;
+  width: 1rem;
 }
 .border-left { left: 0; }
 .border-right { right: 0; }
 
 
-
-
-.main {
-  /*z-index: 1;*/
-}
-
-.page {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  text-align: center;
-}
-
-.container {
-  width: 80%;
-  max-width: 750px;
-  display: inline-block;
-}
+/* --- Navbar --- */
 
 .navbar {
-  margin: 1.5em auto 0;
-  display: block;
-  text-align: center;
-  font-size: 2.4em;
+  float: left;
+  padding: 1rem;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  position: relative;
+  font-size: 2.4rem;
 }
 
-  .navbar ul {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    display: inline-block;
-  }
-
-  .navbar li {
-    float: left;
-  }
-
-  .navbar a {
-    padding: 0.5em 2.5em;
-    display: block;
-  }
-
-    .navbar a:hover {
-      color: #F1F1F1;
-      background: #EF233C;
-      border-radius: 5px;
-    }
-
-.headline-content {
-  transform: translate(-50%, -67%);
+.navbar ul {
+  margin: 0;
+  padding: 0;
   position: absolute;
-  width: 100%;
-  top: 33%;
+  text-align: center;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+  top: 50%;
   left: 50%;
 }
 
-  .headline-content h2 {
-    margin: 0;
-    font: 4.2em 'Bungee Hairline', sans-serif;
+.navbar a {
+  padding: 2rem 4rem;
+  display: block;
+}
+
+  .navbar a:hover {
+    color: #F1F1F1;
+    background: #EF233C;
+    border-radius: 5px;
   }
 
-  .headline-content h1 {
+
+/* --- Main content area --- */
+
+main {
+  float: right;
+  padding: 1rem;
+  width: 80%;
+  height: 100%;
+  position: relative;
+  text-align: right;
+}
+
+.content {
+  height: 100%;
+  position: relative;
+}
+
+
+/* --- Welcome page content --- */
+
+.welcome {
+  transform: translate(-42%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 58%;
+}
+
+  .welcome h2 {
     margin: 0;
-    font: 11em 'Bungee Shade', cursive;
+    font: 4.3rem 'Bungee Hairline', sans-serif;
+  }
+
+  .welcome h1 {
+    margin: 0;
+    font: 12rem 'Bungee Shade', cursive;
   }
