@@ -133,15 +133,41 @@ SPECIFIC STYLES
   left: 50%;
 }
 
+.navbar li {
+  margin: 2rem 0;
+}
+
 .navbar a {
-  padding: 2rem 3.5rem;
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem 2.5rem;
   display: block;
+  border-radius: 5px;
+  transition:         150ms ease-in-out 50ms;
+  -o-transition:      150ms ease-in-out 50ms;
+  -ms-transition:     150ms ease-in-out 50ms;
+  -moz-transition:    150ms ease-in-out 50ms;
+  -webkit-transition: 150ms ease-in-out 50ms;
 }
 
   .navbar a:hover {
     color: #F1F1F1;
+  }
+
+  .navbar a:before {
+    content: "";
+    position: absolute;
     background: #EF233C;
-    border-radius: 5px;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 100%;
+    z-index: -1;
+    -webkit-transition: right 200ms ease-in-out;
+  }
+
+  .navbar a:hover:before {
+    right: 0;
   }
 
 
