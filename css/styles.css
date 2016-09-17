@@ -82,6 +82,8 @@ SPECIFIC STYLES
 
 .page {
   height: 100%;
+  background: #FFF;
+  background-image: linear-gradient(#FFF, #EDF2F4);
 }
 
 /* --- Fixed border --- */
@@ -97,14 +99,14 @@ SPECIFIC STYLES
 
 .border-top, .border-bottom {
   left: 0; right: 0;
-  height: 1rem;
+  height: 1.5rem;
 }
 .border-top { top: 0; }
 .border-bottom { bottom: 0; }
 
 .border-left, .border-right {
   top: 0; bottom: 0;
-  width: 1rem;
+  width: 1.5rem;
 }
 .border-left { left: 0; }
 .border-right { right: 0; }
@@ -114,7 +116,7 @@ SPECIFIC STYLES
 
 .navbar {
   float: left;
-  padding: 1rem;
+  padding: 1.5rem;
   left: 0;
   width: 20%;
   height: 100%;
@@ -151,7 +153,7 @@ SPECIFIC STYLES
 }
 
   .navbar a:hover {
-    color: #F1F1F1;
+    color: #FFF;
   }
 
   .navbar a:before {
@@ -175,7 +177,7 @@ SPECIFIC STYLES
 
 main {
   float: right;
-  padding: 1rem;
+  padding: 1.5rem;
   width: 80%;
   height: 100%;
   position: relative;
