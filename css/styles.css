@@ -68,9 +68,9 @@ ul {
 /* --- Clearfix --- */
 
 .cf:after {
-    content:" ";
-    display:block;
-    clear:both;
+  content:" ";
+  display:block;
+  clear:both;
 }
 
 
@@ -83,7 +83,17 @@ SPECIFIC STYLES
 .page {
   height: 100%;
   background: #FFF;
-  background-image: linear-gradient(#FFF, #EDF2F4);
+  /* background-image: linear-gradient(#FFF, #EDF2F4); */
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 /* --- Fixed border --- */
@@ -115,24 +125,28 @@ SPECIFIC STYLES
 /* --- Navbar --- */
 
 .navbar {
+  background: #EDF2F4;
   float: left;
-  padding: 1.5rem;
+  padding: 1.5rem 0 1.5rem 1.5rem;
   left: 0;
   width: 20%;
   height: 100%;
   position: relative;
   font-size: 2.4rem;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 .navbar ul {
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: relative;
   text-align: center;
   display: inline-block;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   top: 50%;
-  left: 50%;
+  width: 100%;
 }
 
 .navbar li {
@@ -142,9 +156,8 @@ SPECIFIC STYLES
 .navbar a {
   position: relative;
   overflow: hidden;
-  padding: 1.5rem 2.5rem;
+  padding: 2rem 0;
   display: block;
-  border-radius: 5px;
   transition:         150ms ease-in-out 50ms;
   -o-transition:      150ms ease-in-out 50ms;
   -ms-transition:     150ms ease-in-out 50ms;
@@ -152,25 +165,25 @@ SPECIFIC STYLES
   -webkit-transition: 150ms ease-in-out 50ms;
 }
 
-  .navbar a:hover {
-    color: #FFF;
-  }
+.navbar a:hover {
+  color: #FFF;
+}
 
-  .navbar a:before {
-    content: "";
-    position: absolute;
-    background: #EF233C;
-    bottom: 0;
-    left: 0;
-    top: 0;
-    right: 100%;
-    z-index: -1;
-    -webkit-transition: right 200ms ease-in-out;
-  }
+.navbar a:before {
+  content: "";
+  position: absolute;
+  background: #EF233C;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 100%;
+  z-index: -1;
+  -webkit-transition: right 200ms ease-in-out;
+}
 
-  .navbar a:hover:before {
-    right: 0;
-  }
+.navbar a:hover:before {
+  right: 0;
+}
 
 
 /* --- Main content area --- */
@@ -193,10 +206,10 @@ main {
 /* --- Welcome page content --- */
 
 .welcome {
-  transform: translate(-42%, -50%);
+  transform: translateY(-50%);
   position: absolute;
   top: 50%;
-  left: 58%;
+  right: 4rem;
 }
 
   .welcome h2 {
