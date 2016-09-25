@@ -2,6 +2,16 @@
 GLOBAL STYLES
 ----------------------*/
 
+/* NOTE: to-do list: */
+
+/*
+- text-align right is now missing for the logo. find a way to implement it for the welcome div without messing up the other sections
+
+- move the new wunderman logo into the img folder and sub it out for the old one
+
+*/
+
+
 /* ------ Global tags ------ */
 
 * {
@@ -10,13 +20,13 @@ GLOBAL STYLES
 
 html {
   height: 100%;
-  font-size: 10px;
+  font-size: 62.5%;
 }
 
 body {
   margin: 0;
   height: 100%;
-  font-size: 1rem;
+  font-size: 2.4rem;
   font-family: 'Cousine', monospace;
   box-sizing: border-box;
   line-height: 1.4;
@@ -78,17 +88,17 @@ ul {
 SPECIFIC STYLES
 ----------------------*/
 
-/* --- Container for page --- */
+/* --- Entire page --- */
 
 .page {
   height: 100%;
   background: #FFF;
   /* background-image: linear-gradient(#FFF, #EDF2F4); */
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
 }
 
 @keyframes fadein {
@@ -132,7 +142,7 @@ SPECIFIC STYLES
   width: 20%;
   height: 100%;
   position: relative;
-  font-size: 2.4rem;
+  /*font-size: 2.4rem;*/
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -190,11 +200,10 @@ SPECIFIC STYLES
 
 main {
   float: right;
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 0;
   width: 80%;
   height: 100%;
   position: relative;
-  text-align: right;
 }
 
 .content {
@@ -202,14 +211,20 @@ main {
   position: relative;
 }
 
+.container {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
 
 /* --- Welcome page content --- */
 
 .welcome {
-  transform: translateY(-50%);
-  position: absolute;
-  top: 50%;
-  right: 4rem;
+  margin-right: 4rem;
+  text-align: right;
 }
 
   .welcome h2 {
@@ -220,4 +235,39 @@ main {
   .welcome h1 {
     margin: 0;
     font: 12rem 'Bungee Shade', cursive;
+  }
+
+
+/* --- Experience page content --- */
+
+.job {
+  width: 50%;
+  display: inline-block;
+  font-size: 1.8rem;
+}
+
+  .company-logo {
+    text-align: center;
+  }
+
+  .company-logo img {
+    vertical-align: middle;
+  }
+
+    .digitalcrafts-logo {
+      width: 50%;
+    }
+
+    .wunderman-logo {
+      width: 67%;
+    }
+
+  .job h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 2.4rem;
+  }
+
+  .job-description {
+      padding: 2rem 5rem;
   }
