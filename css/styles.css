@@ -28,7 +28,7 @@ body {
   height: 100%;
   font-size: 2.4rem;
   font-family: 'Cousine', monospace;
-  box-sizing: border-box;
+  color: #2B2D42;
   line-height: 1.4;
 }
 
@@ -42,6 +42,7 @@ h2 {
 }
 
 ul {
+  padding: 0;
   list-style-type: none;
 }
 
@@ -150,7 +151,6 @@ SPECIFIC STYLES
 
 .navbar ul {
   margin: 0;
-  padding: 0;
   position: relative;
   text-align: center;
   display: inline-block;
@@ -220,7 +220,7 @@ main {
 }
 
 
-/* --- Welcome page content --- */
+/* --- Welcome --- */
 
 .welcome {
   margin-right: 4rem;
@@ -238,7 +238,10 @@ main {
   }
 
 
-/* --- Experience page content --- */
+/* --- Skills --- */
+
+
+/* --- Experience --- */
 
 .job {
   width: 50%;
@@ -271,3 +274,25 @@ main {
   .job-description {
       padding: 2rem 5rem;
   }
+
+
+/* --- Projects --- */
+
+
+/* --- Contact --- */
+
+.contact h3 {
+  margin: 0;
+  text-align: center;
+}
+
+.social-icons a {
+  font-size: 6rem;
+  color: #2B2D42;
+}
+
+.social-icons ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
