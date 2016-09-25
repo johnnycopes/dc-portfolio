@@ -26,10 +26,10 @@ html {
 body {
   margin: 0;
   height: 100%;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-family: 'Cousine', monospace;
   color: #2B2D42;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 nav a {
@@ -39,6 +39,13 @@ nav a {
 
 h2 {
   font-size: 3.6rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 ul {
@@ -143,7 +150,7 @@ SPECIFIC STYLES
   width: 20%;
   height: 100%;
   position: relative;
-  /*font-size: 2.4rem;*/
+  font-size: 2.4rem;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -195,6 +202,9 @@ SPECIFIC STYLES
   right: 0;
 }
 
+.js-selected {
+  font-weight: 700;
+}
 
 /* --- Main content area --- */
 
@@ -238,8 +248,27 @@ main {
   }
 
 
+/* --- About --- */
+
+.about {
+  text-align: center;
+}
+
+.about p {
+  margin: 2rem auto 0;
+  width: 60%;
+}
+
+
 /* --- Skills --- */
 
+.skills {
+  text-align: center;
+}
+
+.skills p {
+  margin: 0;
+}
 
 /* --- Experience --- */
 
@@ -265,12 +294,6 @@ main {
       width: 67%;
     }
 
-  .job h3 {
-    margin: 0;
-    text-align: center;
-    font-size: 2.4rem;
-  }
-
   .job-description {
       padding: 2rem 5rem;
   }
@@ -278,13 +301,15 @@ main {
 
 /* --- Projects --- */
 
-
-/* --- Contact --- */
-
-.contact h3 {
-  margin: 0;
+.projects {
   text-align: center;
 }
+
+.projects p {
+  margin: 0;
+}
+
+/* --- Contact --- */
 
 .social-icons a {
   font-size: 6rem;
