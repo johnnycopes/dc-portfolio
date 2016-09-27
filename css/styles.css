@@ -173,17 +173,19 @@ SPECIFIC STYLES
   overflow: hidden;
   padding: 2rem 0;
   display: block;
-  transition:         150ms ease-in-out 50ms;
+  /*transition:         150ms ease-in-out 50ms;
   -o-transition:      150ms ease-in-out 50ms;
   -ms-transition:     150ms ease-in-out 50ms;
   -moz-transition:    150ms ease-in-out 50ms;
-  -webkit-transition: 150ms ease-in-out 50ms;
+  -webkit-transition: 150ms ease-in-out 50ms;*/
 }
 
+.nav-link-selected,
 .navbar a:hover {
   color: #FFF;
 }
 
+.nav-link-selected,
 .navbar a:before {
   content: "";
   position: absolute;
@@ -193,11 +195,15 @@ SPECIFIC STYLES
   top: 0;
   right: 100%;
   z-index: -1;
-  -webkit-transition: right 200ms ease-in-out;
+  /*-webkit-transition: right 200ms ease-in-out;*/
 }
 
 .navbar a:hover:before {
   right: 0;
+}
+
+.navbar a:active {
+  background: #D90429;
 }
 
 .js-selected {
@@ -300,7 +306,26 @@ main {
 /* --- Projects --- */
 
 .projects {
+}
+
+.projects ul {
+  width: 80%;
+  margin: 0 auto;
   text-align: center;
+}
+
+.projects ul li {
+  margin: 1rem 0;
+  float: left;
+  display: inline-block;
+  width: 33.33%;
+}
+
+.project-tile {
+  margin: 0 auto;
+  width: 25rem;
+  height: 25rem;
+  background: #EDF2F4;
 }
 
 .projects p {

@@ -7,6 +7,8 @@ $(document).ready(function(){
     // When a navbar link is clicked, first hide all sections and then show the clicked link's corresponding section
     $('.js-nav-link').on('click', function(){
         $('.js-section').hide();
+        $('.js-nav-link').removeClass('nav-link-selected');
+        $(this).addClass('nav-link-selected');
 
         if ($(this).hasClass('js-welcome')) {
             $('.welcome').show();
