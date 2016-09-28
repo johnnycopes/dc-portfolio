@@ -180,12 +180,10 @@ SPECIFIC STYLES
   -webkit-transition: 150ms ease-in-out 50ms;*/
 }
 
-.nav-link-selected,
 .navbar a:hover {
   color: #FFF;
 }
 
-.nav-link-selected,
 .navbar a:before {
   content: "";
   position: absolute;
@@ -204,10 +202,13 @@ SPECIFIC STYLES
 
 .navbar a:active {
   background: #D90429;
+  top: 1px;
 }
+
 
 .js-selected {
   font-weight: 700;
+  font-style: italic;
 }
 
 /* --- Main content area --- */
@@ -234,7 +235,7 @@ main {
 }
 
 
-/* --- Welcome --- */
+/* --- Welcome (Hi) --- */
 
 .welcome {
   margin-right: 4rem;
@@ -255,23 +256,26 @@ main {
 /* --- About --- */
 
 .about {
-  text-align: center;
-}
-
-.about p {
-  margin: 2rem auto 0;
+  margin: 0 auto;
   width: 60%;
-}
-
-
-/* --- Skills --- */
-
-.skills {
   text-align: center;
 }
 
-.skills p {
-  margin: 0;
+.bio {
+  margin-bottom: 4rem;
+}
+
+/*.bio p {
+  margin: 2rem auto;
+}*/
+
+.skills ul {
+  float: left;
+  width: 50%;
+}
+
+.skills li {
+  margin: 1.5rem 0;
 }
 
 /* --- Experience --- */
@@ -279,7 +283,6 @@ main {
 .job {
   width: 50%;
   display: inline-block;
-  font-size: 1.8rem;
 }
 
   .company-logo {
@@ -331,6 +334,7 @@ main {
 .projects p {
   margin: 0;
 }
+
 
 /* --- Contact --- */
 

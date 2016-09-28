@@ -4,11 +4,13 @@ $(document).ready(function(){
     $('.js-section').hide();
     $('.welcome').show();
 
+
     // When a navbar link is clicked, first hide all sections and then show the clicked link's corresponding section
     $('.js-nav-link').on('click', function(){
         $('.js-section').hide();
-        $('.js-nav-link').removeClass('nav-link-selected');
-        $(this).addClass('nav-link-selected');
+        $('.home-logo').show();
+        $('.js-nav-link').removeClass('js-selected');
+        $(this).addClass('js-selected');
 
         if ($(this).hasClass('js-welcome')) {
             $('.welcome').show();
