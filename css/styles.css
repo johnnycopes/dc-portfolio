@@ -338,6 +338,34 @@ main {
 
 /* --- Contact --- */
 
+.contact {
+  width: 60%;
+  margin: 0 auto;
+}
+
+form {
+  margin-top: 4rem;
+}
+
+.form-field {
+  float: left;
+  width: 50%;
+}
+
+.form-field.textarea {
+  width: 100%;
+}
+
+  .contact input,
+  .contact textarea {
+    width: 100%;
+  }
+
+  .contact textarea {
+    resize: none;
+  }
+
+
 .social-icons a {
   font-size: 6rem;
   color: #2B2D42;
@@ -345,6 +373,6 @@ main {
 
 .social-icons ul li {
   float: left;
-  width: 25%;
+  width: 33.33%;
   text-align: center;
 }
