@@ -4,7 +4,6 @@ $(document).ready(function(){
     $('.js-section').hide();
     $('.welcome').show();
 
-
     // When a navbar link is clicked, slide to correct panel
     $('.js-nav-link').on('click', function(){
         $('.js-nav-link').removeClass('js-selected');
@@ -20,19 +19,19 @@ $(document).ready(function(){
             }
         }
         else if ($(this).hasClass('js-experience')) {
-            $('.experience').slideDown(350);
+            $('.about, .experience').slideDown(350);
             if ($('.projects:hidden')) {
                 $('.js-section').not('.welcome, .about, .experience').slideUp(350);
             }
         }
         else if ($(this).hasClass('js-projects')) {
-            $('.projects').slideDown(350);
+            $('.about, .experience, .projects').slideDown(350);
             if ($('.projects:hidden')) {
                 $('.js-section').not('.welcome, .about, .experience, .projects').slideUp(350);
             }
         }
         else if ($(this).hasClass('js-contact')) {
-            $('.contact').slideDown(350);
+            $('.about, .experience, .projects, .contact').slideDown(350);
         }
     });
 
