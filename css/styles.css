@@ -120,7 +120,7 @@ SPECIFIC STYLES
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 10;
 }
 
 .border-top, .border-bottom {
@@ -228,17 +228,27 @@ main {
 
 .container {
   margin: 0 auto;
-  width: 100%;
   position: relative;
   transform: translateY(-50%);
   top: 50%;
 }
 
+.js-section {
+  position: absolute;
+  background: white !important;
+  width: 100%;
+  height: 100%;
+}
 
 /* --- Welcome (Hi) --- */
 
 .welcome {
-  margin-right: 4rem;
+  background: cadetblue;
+  z-index: 1;
+}
+
+.welcome .container {
+  padding-right: 4rem;
   text-align: right;
 }
 
@@ -256,6 +266,11 @@ main {
 /* --- About --- */
 
 .about {
+  background: gold;
+  z-index: 2;
+}
+
+.about .container {
   margin: 0 auto;
   width: 60%;
   text-align: center;
@@ -279,6 +294,11 @@ main {
 }
 
 /* --- Experience --- */
+
+.experience {
+  background: indianred;
+  z-index: 3;
+}
 
 .job {
   width: 50%;
@@ -309,12 +329,18 @@ main {
 /* --- Projects --- */
 
 .projects {
+  background: slategray;
+  z-index: 4;
 }
 
-.projects ul {
+.projects .container {
   width: 80%;
   margin: 0 auto;
   text-align: center;
+}
+
+.projects ul {
+  margin: 0;
 }
 
 .projects ul li {
@@ -339,8 +365,12 @@ main {
 /* --- Contact --- */
 
 .contact {
+  background: darksalmon;
+  z-index: 5;
+}
+
+.contact .container {
   width: 60%;
-  margin: 0 auto;
 }
 
 form {

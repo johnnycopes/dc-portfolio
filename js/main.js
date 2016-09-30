@@ -5,30 +5,34 @@ $(document).ready(function(){
     $('.welcome').show();
 
 
-    // When a navbar link is clicked, first hide all sections and then show the clicked link's corresponding section
+    // When a navbar link is clicked, slide to correct panel
     $('.js-nav-link').on('click', function(){
-        $('.js-section').hide();
-        $('.home-logo').show();
         $('.js-nav-link').removeClass('js-selected');
         $(this).addClass('js-selected');
 
         if ($(this).hasClass('js-welcome')) {
-            $('.welcome').show();
+            $('.js-section').not('.welcome').slideUp(350);
         }
         else if ($(this).hasClass('js-about')) {
-            $('.about').show();
-        }
-        else if ($(this).hasClass('js-skills')) {
-            $('.skills').show();
+            $('.about').slideDown(350);
+            if ($('.experience:hidden')) {
+                $('.js-section').not('.welcome, .about').slideUp(350);
+            }
         }
         else if ($(this).hasClass('js-experience')) {
-            $('.experience').show();
+            $('.experience').slideDown(350);
+            if ($('.projects:hidden')) {
+                $('.js-section').not('.welcome, .about, .experience').slideUp(350);
+            }
         }
         else if ($(this).hasClass('js-projects')) {
-            $('.projects').show();
+            $('.projects').slideDown(350);
+            if ($('.projects:hidden')) {
+                $('.js-section').not('.welcome, .about, .experience, .projects').slideUp(350);
+            }
         }
         else if ($(this).hasClass('js-contact')) {
-            $('.contact').show();
+            $('.contact').slideDown(350);
         }
     });
 
