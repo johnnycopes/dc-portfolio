@@ -24,7 +24,7 @@ html {
 body {
   margin: 0;
   height: 100%;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: 'Cousine', monospace;
   color: #2B2D42;
   line-height: 1.5;
@@ -41,14 +41,19 @@ h2 {
 
 h3 {
   margin: 0;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 700;
   text-align: center;
 }
 
 ul {
+  margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+p {
+  margin: 2rem 0;
 }
 
 
@@ -226,15 +231,97 @@ main {
 
   .welcome h2 {
     margin: 0;
-    font: 1.9rem 'Bungee Hairline', sans-serif
+    font: 1.8rem 'Bungee Hairline', sans-serif
   }
 
   .welcome h1 {
-    margin: 0;
-    font: 5.4rem 'Bungee Shade', cursive
+    margin: 0 auto;
+    word-wrap: break-word;
+    font: 8rem 'Bungee Shade', cursive;
+    width: 90%;
   }
 
 
+/* --- About --- */
+
+.about .container {
+  text-align: center;
+}
+
+.bio {
+  margin-bottom: 4rem;
+}
+
+.skills ul {
+  margin: 2rem 0;
+}
+
+.skills li {
+  margin: 1.5rem 0;
+}
+
+
+/* --- Experience --- */
+
+.job {
+  margin: 0 0 4rem 0;
+}
+
+  .company-logo {
+    text-align: center;
+  }
+
+  .company-logo img {
+    vertical-align: middle;
+  }
+
+    .digitalcrafts-logo {
+      width: 50%;
+    }
+
+    .wunderman-logo {
+      width: 67%;
+    }
+
+  .job-description {
+      margin: 2rem 0;
+  }
+
+
+/* --- Projects --- */
+
+.projects {
+  background: slategray;
+  z-index: 4;
+}
+
+.projects .container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.projects ul {
+  margin: 0;
+}
+
+.projects ul li {
+  margin: 1rem 0;
+  float: left;
+  display: inline-block;
+  width: 33.33%;
+}
+
+.project-tile {
+  margin: 0 auto;
+  width: 25rem;
+  height: 25rem;
+  background: #EDF2F4;
+}
+
+.projects p {
+  margin: 0;
+}
 
 
 
@@ -271,6 +358,16 @@ MEDIA QUERIES
 ----------------------*/
 
 @media screen and (min-width: 1050px) {
+
+
+  body {
+    font-size: 1.8rem;
+  }
+
+
+  h3 {
+    font-size: 2.4rem;
+  }
 
 
   /* --- Entire page --- */
@@ -404,6 +501,8 @@ MEDIA QUERIES
     }
 
     .welcome h1 {
+      width: auto;
+      word-wrap: normal;
       font: 12rem 'Bungee Shade', cursive;
     }
 
@@ -418,25 +517,13 @@ MEDIA QUERIES
   .about .container {
     margin: 0 auto;
     width: 60%;
-    text-align: center;
   }
 
-  .bio {
-    margin-bottom: 4rem;
-  }
-
-  /*.bio p {
-    margin: 2rem auto;
-  }*/
-
-  .skills ul {
+  .skills ul li {
     float: left;
     width: 50%;
   }
 
-  .skills li {
-    margin: 1.5rem 0;
-  }
 
   /* --- Experience --- */
 
@@ -457,14 +544,6 @@ MEDIA QUERIES
     .company-logo img {
       vertical-align: middle;
     }
-
-      .digitalcrafts-logo {
-        width: 50%;
-      }
-
-      .wunderman-logo {
-        width: 67%;
-      }
 
     .job-description {
         padding: 2rem 5rem;
