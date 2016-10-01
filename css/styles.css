@@ -5,7 +5,11 @@ GLOBAL STYLES
 /* NOTE: to-do list: */
 
 /*
-- find a cool, subtle way to implement a return home button (little house in the bottom right corner, perhaps?)
+- use js to give hi screen full screen height, then space everything else well
+- track progress in page using js and mark accordingly on header
+- set media queries for huge screens (1500px+): project tile size, header max-width, body copy size
+- refactor code and eliminate excessive styles
+- sub out fontawesome for ionicons
 
 */
 
@@ -210,7 +214,9 @@ main {
 .container {
   margin: 0 auto;
   padding: 7.5rem 0rem;
+  max-width: 750px;
   width: 90%;
+  text-align: center;
 }
 
 .js-section {
@@ -240,11 +246,6 @@ main {
 
 /* --- About --- */
 
-.about .container {
-  max-width: 750px;
-  text-align: center;
-}
-
 .bio {
   margin-bottom: 4rem;
 }
@@ -254,14 +255,16 @@ main {
 }
 
 .skills li {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 
 /* --- Experience --- */
 
 .job {
-  margin: 0 0 4rem 0;
+  margin: 0 auto 4rem;
+  max-width: 550px;
+  text-align: left;
 }
 
   .company-logo {
@@ -269,45 +272,44 @@ main {
   }
 
   .company-logo img {
-    max-width: 250px;
     vertical-align: middle;
   }
 
     .digitalcrafts-logo {
-      width: 50%;
+      width: 44%;
+      min-width: 200px;
     }
 
     .wunderman-logo {
-      width: 67%;
+      width: 55%;
+      min-width: 250px;
     }
 
   .job-description {
       margin: 2rem 0;
   }
 
+    .job-description a {
+      display: block;
+    }
+
 
 /* --- Projects --- */
 
-.projects .container {
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-}
-
 .project-tile {
-  margin: 1rem;
+  margin: 1rem .5rem;
   display: inline-block;
   background: #EDF2F4;
-  max-width: 260px;
-  max-height: 260px;
+  max-width: 250px;
+  max-height: 250px;
 }
 
 .project-tile a {
   display: block;
-  padding: 1rem;
 }
 
 .project-tile img {
+  padding: 1rem;
   width: 100%;
 }
 
@@ -423,9 +425,10 @@ MEDIA QUERIES
     font-size: 1.8rem;
   }
 
-  .container {
-    width: 80%;
+  h3 {
+    font-size: 2.4rem;
   }
+
 
   /* --- Navbar --- */
 
@@ -442,13 +445,25 @@ MEDIA QUERIES
 
 
   .welcome h2 {
-    font-size: 3.1rem;
+    font-size: 3.5rem;
   }
 
   .welcome h1 {
     font-size: 10rem;
   }
 
+
+  /* --- About --- */
+
+  /* --- Experience --- */
+
+  /* --- Projecs --- */
+
+  /* --- Social --- */
+
+  .social-icons a {
+    font-size: 6rem;
+  }
 
 }
 
@@ -459,15 +474,6 @@ MEDIA QUERIES
 
 
 @media screen and (min-width: 1050px) {
-
-
-  body {
-    font-size: 1.8rem;
-  }
-
-  h3 {
-    font-size: 2.4rem;
-  }
 
 
   /* --- Entire page --- */
@@ -573,9 +579,9 @@ MEDIA QUERIES
   }
 
   .container {
-    margin: 0 auto;
     padding: 0;
     width: 100%;
+    max-width: none;
     position: relative;
     transform: translateY(-50%);
     top: 50%;
@@ -622,8 +628,7 @@ MEDIA QUERIES
   }
 
   .about .container {
-    margin: 0 auto;
-    width: 60%;
+    max-width: 750px;
   }
 
 
@@ -634,21 +639,19 @@ MEDIA QUERIES
     z-index: 3;
   }
 
+  .experience .container {
+    width: 90%;
+  }
+
   .job {
+    margin: 0;
     width: 50%;
     display: inline-block;
   }
 
-    .company-logo {
-      text-align: center;
-    }
-
-    .company-logo img {
-      vertical-align: middle;
-    }
-
     .job-description {
-        padding: 2rem 5rem;
+      margin: 0;
+      padding: 2rem 10%;
     }
 
 
@@ -659,10 +662,12 @@ MEDIA QUERIES
     z-index: 4;
   }
 
+  .projects .container {
+    max-width: 1000px;
+  }
+
   .project-tile {
     width: 33.33%;
-    max-width: 240px;
-    /*max-height: 240px;*/
   }
 
 
@@ -674,7 +679,7 @@ MEDIA QUERIES
   }
 
   .contact .container {
-    width: 60%;
+    max-width: 750px;
   }
 
   form {
