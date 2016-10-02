@@ -1,6 +1,6 @@
-/*----------------------
+/*-------------------------------------
 GLOBAL STYLES
-----------------------*/
+-------------------------------------*/
 
 /* NOTE: to-do list: */
 
@@ -28,10 +28,15 @@ html {
 body {
   margin: 0;
   height: 100%;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-family: 'Cousine', monospace;
   color: #2B2D42;
   line-height: 1.5;
+}
+
+main {
+  margin: 0;
+  height: 100%;
 }
 
 nav a {
@@ -45,7 +50,7 @@ h2 {
 
 h3 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   text-align: center;
 }
@@ -60,30 +65,6 @@ p {
   margin: 2rem 0;
 }
 
-
-/* ------ Repeated styles ------ */
-
-.white { color: #F1F1F1; }
-.bg-white {background: #F1F1F1;}
-
-.light-gray { color: #EDF2F4; }
-.bg-light-gray { background: #EDF2F4; }
-
-.gray { color: #8D99AE; }
-.bg-gray {background: #8D99AE;}
-
-.black { color: #2B2D42; }
-.bg-black {background: #2B2D42; }
-
-.red { color: #EF233C; }
-.bg-red { background: #EF233C; }
-
-.no-mar { margin: 0; }
-.no-line { text-decoration: none; }
-.body-copy-size { font-size: 20px; }
-.center { text-align: center; }
-
-
 /* --- Clearfix --- */
 
 .cf:after {
@@ -93,12 +74,28 @@ p {
 }
 
 
-/*----------------------
+/*-------------------------------------
 SPECIFIC STYLES
-----------------------*/
+-------------------------------------*/
 
 
-/* --- Entire page --- */
+/* ------ Entire page ------ */
+
+.page {
+  height: 100%;
+  background: #FFF;
+  /* background-image: linear-gradient(#FFF, #EDF2F4); */
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
 /*-- Fixed border --- */
 
@@ -129,24 +126,8 @@ SPECIFIC STYLES
       display: none;
     }
 
-.page {
-  height: 100%;
-  background: #FFF;
-  /* background-image: linear-gradient(#FFF, #EDF2F4); */
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-  -ms-animation: fadein 2s; /* Internet Explorer */
-  -o-animation: fadein 2s; /* Opera < 12.1 */
-  animation: fadein 2s;
-}
 
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-
-/* --- Navbar --- */
+/* ------ Navbar ------ */
 
 .navbar {
   position: fixed;
@@ -200,20 +181,16 @@ SPECIFIC STYLES
 }
 
 
-/* --- Main content area --- */
+/* ------ Main content area ------ */
 
-main {
-  margin-top: 41px;
-  /*float: right;
-  padding: 1.5rem 1.5rem 1.5rem 0;
-  width: 80%;
+.content {
   height: 100%;
-  position: relative;*/
+  position: relative;
 }
 
 .container {
   margin: 0 auto;
-  padding: 7.5rem 0rem;
+  /*padding: 7.5rem 0rem;*/
   max-width: 750px;
   width: 90%;
   text-align: center;
@@ -225,6 +202,16 @@ main {
 
 
 /* --- Welcome (Hi) --- */
+
+.welcome {
+  height: 100%;
+}
+
+.welcome .container {
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+}
 
 .welcome .text {
   margin: 0 auto;
@@ -332,37 +319,9 @@ main {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----------------------
+/*-------------------------------------
 MEDIA QUERIES
-----------------------*/
-
-
+-------------------------------------*/
 
 @media screen and (min-width: 500px) {
 
@@ -429,6 +388,17 @@ MEDIA QUERIES
     font-size: 2.4rem;
   }
 
+  .container {
+    margin: 0 auto;
+    /*padding: 7.5rem 0rem;*/
+    max-width: 750px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+  }
+
 
   /* --- Navbar --- */
 
@@ -455,9 +425,19 @@ MEDIA QUERIES
 
   /* --- About --- */
 
+  .about,
+  .projects {
+    background: #2B2D42;
+    color: #fff;
+  }
+
   /* --- Experience --- */
 
   /* --- Projecs --- */
+
+  .projects {
+    background: #2B2D42;
+  }
 
   /* --- Social --- */
 
