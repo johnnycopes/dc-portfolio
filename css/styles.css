@@ -122,10 +122,6 @@ SPECIFIC STYLES
 .border-left { left: 0; }
 .border-right { right: 0; }
 
-    .border {
-      display: none;
-    }
-
 
 /* ------ Navbar ------ */
 
@@ -190,7 +186,7 @@ SPECIFIC STYLES
 
 .container {
   margin: 0 auto;
-  /*padding: 7.5rem 0rem;*/
+  padding: 7.5rem 0rem;
   max-width: 750px;
   width: 90%;
   text-align: center;
@@ -373,11 +369,6 @@ MEDIA QUERIES
   }
 
 
-
-
-
-
-
 @media screen and (min-width: 768px) {
 
   body {
@@ -387,18 +378,6 @@ MEDIA QUERIES
   h3 {
     font-size: 2.4rem;
   }
-
-  .container {
-    margin: 0 auto;
-    /*padding: 7.5rem 0rem;*/
-    max-width: 750px;
-    width: 90%;
-    text-align: center;
-    position: relative;
-    transform: translateY(-50%);
-    top: 50%;
-  }
-
 
   /* --- Navbar --- */
 
@@ -410,6 +389,22 @@ MEDIA QUERIES
     padding: 2rem 4rem;
   }
 
+  /* --- Main content area --- */
+
+  .container {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 750px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+  }
+
+  .js-section {
+    height: 100%;
+  }
 
   /* --- Welcome (Hi) --- */
 
@@ -425,8 +420,7 @@ MEDIA QUERIES
 
   /* --- About --- */
 
-  .about,
-  .projects {
+  .about {
     background: #2B2D42;
     color: #fff;
   }
@@ -453,7 +447,7 @@ MEDIA QUERIES
 
 
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 1100px) {
 
 
   /* --- Entire page --- */
@@ -474,16 +468,10 @@ MEDIA QUERIES
     height: 100%;
     position: relative;
     font-size: 2.4rem;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
   }
 
   .navbar ul {
-    margin: 0;
     position: relative;
-    text-align: center;
-    display: inline-block;
     transform: translateY(-50%);
     top: 50%;
     width: 100%;
@@ -503,38 +491,16 @@ MEDIA QUERIES
     overflow: hidden;
     padding: 2rem 0;
     display: block;
-    /*transition:         150ms ease-in-out 50ms;
-    -o-transition:      150ms ease-in-out 50ms;
-    -ms-transition:     150ms ease-in-out 50ms;
-    -moz-transition:    150ms ease-in-out 50ms;
-    -webkit-transition: 150ms ease-in-out 50ms;*/
   }
 
   .navbar a:hover {
     color: #FFF;
   }
 
-  .navbar a:before {
-    content: "";
-    position: absolute;
-    background: #EF233C;
-    bottom: 0;
-    left: 0;
-    top: 0;
-    right: 100%;
-    z-index: -1;
-    /*-webkit-transition: right 200ms ease-in-out;*/
-  }
-
-  .navbar a:hover:before {
-    right: 0;
-  }
-
   .navbar a:active {
     background: #D90429;
     top: 1px;
     vertical-align: top;
-    /*padding: 4px 10px 3px;*/
   }
 
   .js-selected {
@@ -581,22 +547,18 @@ MEDIA QUERIES
     z-index: 1;
   }
 
-  .welcome .container {
-    padding-right: 4rem;
-  }
-
   .welcome .text {
-    text-align: right;
+    padding: 0 4rem;
   }
 
     .welcome h2 {
-      font: 4.3rem 'Bungee Hairline', sans-serif;
+      font-size: 4.3rem;
     }
 
     .welcome h1 {
       width: auto;
       word-wrap: normal;
-      font: 12rem 'Bungee Shade', cursive;
+      font-size: 12rem;
     }
 
 
@@ -604,6 +566,7 @@ MEDIA QUERIES
 
   .about {
     background: gold;
+    color: #2B2D42;
     z-index: 2;
   }
 
@@ -631,7 +594,7 @@ MEDIA QUERIES
 
     .job-description {
       margin: 0;
-      padding: 2rem 10%;
+      padding: 2rem 12%;
     }
 
 
@@ -662,29 +625,6 @@ MEDIA QUERIES
     max-width: 750px;
   }
 
-  form {
-    margin-top: 4rem;
-  }
-
-  .form-field {
-    float: left;
-    width: 50%;
-  }
-
-  .form-field.textarea {
-    width: 100%;
-  }
-
-    .contact input,
-    .contact textarea {
-      width: 100%;
-    }
-
-    .contact textarea {
-      resize: none;
-    }
-
-
   .social-icons a {
     font-size: 6rem;
     color: #2B2D42;
@@ -695,7 +635,5 @@ MEDIA QUERIES
     width: 33.33%;
     text-align: center;
   }
-
-
 
 }
