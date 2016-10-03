@@ -5,11 +5,11 @@ GLOBAL STYLES
 /* NOTE: to-do list: */
 
 /*
-- use js to give hi screen full screen height, then space everything else well
 - track progress in page using js and mark accordingly on header
 - set media queries for huge screens (1500px+): project tile size, header max-width, body copy size
 - refactor code and eliminate excessive styles
 - sub out fontawesome for ionicons
+- set min-height on section divs combined with 100% height to full screen their content
 
 */
 
