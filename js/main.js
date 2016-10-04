@@ -1,6 +1,11 @@
 $(document).ready(function(){
 
-    if ($(window).width() >= 1050) {
+// Change selected navbar item while scrolling
+
+
+
+// Slide panels up/down when navbar links are clicked
+    if ($(window).width() >= 1100) {
 
         // Hide all sections except welcome on page load
         $('.js-section').hide();

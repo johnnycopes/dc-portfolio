@@ -5,11 +5,11 @@ GLOBAL STYLES
 /* NOTE: to-do list: */
 
 /*
-- track progress in page using js and mark accordingly on header
+- track progress in page using js and mark accordingly on header (lookup bootstrap scrollspy documentation)
 - set media queries for huge screens (1500px+): project tile size, header max-width, body copy size
 - refactor code and eliminate excessive styles
 - sub out fontawesome for ionicons
-- set min-height on section divs combined with 100% height to full screen their content
+- set min-height on section divs combined with 100% height to full screen their content (line 387 does this)
 
 */
 
@@ -20,13 +20,16 @@ GLOBAL STYLES
   box-sizing: border-box;
 }
 
+body, main, h2, h3, ul {
+  margin: 0;
+}
+
 html {
   height: 100%;
   font-size: 62.5%;
 }
 
 body {
-  margin: 0;
   height: 100%;
   font-size: 1.5rem;
   font-family: 'Cousine', monospace;
@@ -35,7 +38,6 @@ body {
 }
 
 main {
-  margin: 0;
   height: 100%;
 }
 
@@ -49,14 +51,12 @@ h2 {
 }
 
 h3 {
-  margin: 0;
   font-size: 1.8rem;
   font-weight: 700;
   text-align: center;
 }
 
 ul {
-  margin: 0;
   padding: 0;
   list-style-type: none;
 }
@@ -138,7 +138,6 @@ SPECIFIC STYLES
 }
 
 .navbar ul {
-  margin: 0;
   text-align: center;
 }
 
@@ -157,6 +156,7 @@ SPECIFIC STYLES
   -webkit-transition: 150ms ease-in-out 50ms;*/
 }
 
+.link-selected,
 .navbar a:hover {
   color: #FFF;
   background: #EF233C;
@@ -164,7 +164,6 @@ SPECIFIC STYLES
 
 .navbar a:active {
   background: #D90429;
-  /*padding: 4px 10px 3px;*/
 }
 
 .navbar li:first-child {
@@ -216,7 +215,6 @@ SPECIFIC STYLES
 }
 
 .welcome h2 {
-  margin: 0;
   font: 1.8rem 'Bungee Hairline', sans-serif
 }
 
@@ -228,6 +226,11 @@ SPECIFIC STYLES
 
 
 /* --- About --- */
+
+.about {
+  background: #2B2D42;
+  color: #fff;
+}
 
 .bio {
   margin-bottom: 4rem;
@@ -258,6 +261,10 @@ SPECIFIC STYLES
     vertical-align: middle;
   }
 
+  .company-logo a {
+    display: inline-block;
+  }
+
     .digitalcrafts-logo {
       width: 44%;
       min-width: 200px;
@@ -272,12 +279,12 @@ SPECIFIC STYLES
       margin: 2rem 0;
   }
 
-    .job-description a {
-      display: block;
-    }
-
 
 /* --- Projects --- */
+
+.projects {
+  background: #2B2D42;
+}
 
 .project-tile {
   margin: 1rem .5rem;
@@ -343,6 +350,10 @@ MEDIA QUERIES
       font-size: 2.8rem;
     }
 
+    .welcome h1 {
+      word-wrap: normal;
+    }
+
   /* --- About --- */
 
   .about p {
@@ -373,6 +384,7 @@ MEDIA QUERIES
 
   body {
     font-size: 1.8rem;
+    /*min-height: 900px;*/
   }
 
   h3 {
@@ -442,15 +454,13 @@ MEDIA QUERIES
 }
 
 
-
-
-
-
-
 @media screen and (min-width: 1100px) {
 
-
   /* --- Entire page --- */
+
+  .body {
+    min-height: none;
+  }
 
   .border {
     display: block;
@@ -498,20 +508,13 @@ MEDIA QUERIES
   }
 
   .navbar a:active {
-    background: #D90429;
     top: 1px;
     vertical-align: top;
-  }
-
-  .js-selected {
-    font-weight: 700;
-    font-style: italic;
   }
 
   /* --- Main content area --- */
 
   main {
-    margin: 0;
     float: right;
     padding: 1.5rem 1.5rem 1.5rem 0;
     width: 80%;
@@ -543,7 +546,6 @@ MEDIA QUERIES
   /* --- Welcome (Hi) --- */
 
   .welcome {
-    background: cadetblue;
     z-index: 1;
   }
 
@@ -557,7 +559,6 @@ MEDIA QUERIES
 
     .welcome h1 {
       width: auto;
-      word-wrap: normal;
       font-size: 12rem;
     }
 
@@ -565,7 +566,6 @@ MEDIA QUERIES
   /* --- About --- */
 
   .about {
-    background: gold;
     color: #2B2D42;
     z-index: 2;
   }
@@ -578,7 +578,6 @@ MEDIA QUERIES
   /* --- Experience --- */
 
   .experience {
-    background: indianred;
     z-index: 3;
   }
 
@@ -601,7 +600,6 @@ MEDIA QUERIES
   /* --- Projects --- */
 
   .projects {
-    background: slategray;
     z-index: 4;
   }
 
@@ -617,7 +615,6 @@ MEDIA QUERIES
   /* --- Contact --- */
 
   .contact {
-    background: darksalmon;
     z-index: 5;
   }
 
