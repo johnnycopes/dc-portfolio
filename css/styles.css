@@ -6,10 +6,9 @@ GLOBAL STYLES
 
 /*
 - track progress in page using js and mark accordingly on header (lookup bootstrap scrollspy documentation)
-- set media queries for huge screens (1500px+): project tile size, header max-width, body copy size
+- fix wide screen width/short screen height (mobile turned sideways)
 - refactor code and eliminate excessive styles
 - sub out fontawesome for ionicons
-- set min-height on section divs combined with 100% height to full screen their content (line 387 does this)
 
 */
 
@@ -379,12 +378,14 @@ MEDIA QUERIES
     font-size: 5rem;
   }
 
+}
+
 
 @media screen and (min-width: 768px) {
 
   body {
     font-size: 1.8rem;
-    /*min-height: 900px;*/
+    min-height: 768px;
   }
 
   h3 {
@@ -420,7 +421,6 @@ MEDIA QUERIES
 
   /* --- Welcome (Hi) --- */
 
-
   .welcome h2 {
     font-size: 3.5rem;
   }
@@ -439,10 +439,19 @@ MEDIA QUERIES
 
   /* --- Experience --- */
 
+  .experience {
+    min-height: 900px;
+  }
+
   /* --- Projecs --- */
 
   .projects {
+    min-height: 900px;
     background: #2B2D42;
+  }
+
+  .projects .container {
+    max-width: 1000px;
   }
 
   /* --- Social --- */
@@ -579,6 +588,7 @@ MEDIA QUERIES
 
   .experience {
     z-index: 3;
+    min-height: 0;
   }
 
   .experience .container {
@@ -601,10 +611,7 @@ MEDIA QUERIES
 
   .projects {
     z-index: 4;
-  }
-
-  .projects .container {
-    max-width: 1000px;
+    min-height: 0;
   }
 
   .project-tile {
@@ -631,6 +638,13 @@ MEDIA QUERIES
     float: left;
     width: 33.33%;
     text-align: center;
+  }
+
+@media screen and (min-width: 1600px) {
+
+  .project-tile {
+    max-width: 300px;
+    max-height: 300px;
   }
 
 }
