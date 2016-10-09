@@ -1,7 +1,30 @@
 $(document).ready(function(){
 
-// Change selected navbar item while scrolling
+    var navHeight = $('.navbar').height();
 
+// Change selected navbar item while scrolling
+    if ($(window).width() < 1100) {
+        $('.js-about').on('click', function(){
+            $('html, body').animate({
+                scrollTop: $('.about').offset().top - navHeight
+            });
+        });
+        $('.js-experience').on('click', function(){
+            $('html, body').animate({
+                scrollTop: $('.experience').offset().top - navHeight
+            });
+        });
+        $('.js-projects').on('click', function(){
+            $('html, body').animate({
+                scrollTop: $('.projects').offset().top - navHeight
+            });
+        });
+        $('.js-contact').on('click', function(){
+            $('html, body').animate({
+                scrollTop: $('.contact').offset().top - navHeight
+            });
+        });
+    }
 
 
 // Slide panels up/down when navbar links are clicked
