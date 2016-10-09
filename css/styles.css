@@ -5,7 +5,6 @@ GLOBAL STYLES
 /* NOTE: to-do list: */
 
 /*
-- track progress in page using js and mark accordingly on header (lookup bootstrap scrollspy documentation)
 - fix wide screen width/short screen height (mobile turned sideways)
 - refactor code and eliminate excessive styles
 - sub out fontawesome for ionicons
@@ -81,7 +80,6 @@ SPECIFIC STYLES
 /* ------ Entire page ------ */
 
 body {
-  /* background-image: linear-gradient(#FFF, #EDF2F4); */
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
   -ms-animation: fadein 2s; /* Internet Explorer */
@@ -97,7 +95,6 @@ body {
 .page {
   height: 100%;
   background: #FFF;
-
 }
 
 
@@ -149,29 +146,19 @@ body {
   display: inline-block;
 }
 
+.navbar li:first-child {
+  display: none;
+}
+
 .navbar a {
   position: relative;
   padding: 1rem;
   display: inline-block;
-  /*transition:         150ms ease-in-out 50ms;
-  -o-transition:      150ms ease-in-out 50ms;
-  -ms-transition:     150ms ease-in-out 50ms;
-  -moz-transition:    150ms ease-in-out 50ms;
-  -webkit-transition: 150ms ease-in-out 50ms;*/
-}
-
-.navbar a:hover {
-  font-style: italic;
 }
 
 .link-selected {
   color: #FFF;
   background: #EF233C;
-  /*font-style: italic*/
-}
-
-.navbar li:first-child {
-  display: none;
 }
 
 .js-selected {
@@ -316,7 +303,7 @@ body {
 }
 
 .social-icons ul {
-  margin: 2rem 0;
+  margin: 2rem 0 0;
 }
 
 .social-icons li {
@@ -407,6 +394,7 @@ MEDIA QUERIES
     padding: 2rem 4rem;
   }
 
+
   /* --- Main content area --- */
 
   .container {
@@ -480,11 +468,6 @@ MEDIA QUERIES
     display: block;
   }
 
-  .navbar a:hover {
-    color: #FFF;
-    background: #EF233C;
-  }
-
   .navbar a:active {
     color: #FFF;
     background: #D90429;
@@ -529,6 +512,7 @@ MEDIA QUERIES
 
   .navbar a:hover {
     color: #FFF;
+    background: #EF233C;
   }
 
   .navbar a:active {

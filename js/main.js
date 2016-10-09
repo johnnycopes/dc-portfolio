@@ -1,7 +1,9 @@
 $(document).ready(function(){
 
+    var windowWidth = $(window).width();
+
 // Change selected navbar item on touch
-    if ($(window).width() < 1100) {
+    if (windowWidth < 1100) {
         $('.js-about').on('click', function(){
             $('html, body').animate({
                 scrollTop: $('.about').offset().top
@@ -24,7 +26,6 @@ $(document).ready(function(){
         });
     }
 
-
 // Change highlighted navbar item on scroll
     $(window).scroll(function(){
         var navHeight = $('.navbar').height();
@@ -34,6 +35,8 @@ $(document).ready(function(){
         var experience = $('.experience').offset().top;
         var projects = $('.projects').offset().top;
         var contact = $('.contact').offset().top;
+        var documentHeight = $(document).height();
+        var windowHeight = $(window).height();
 
         if (scroll >= welcome) {
             $('.js-nav-link').removeClass('link-selected');
@@ -53,21 +56,21 @@ $(document).ready(function(){
             $('.js-contact').addClass('link-selected');
             $('.js-projects').removeClass('link-selected');
         }
+        if (scroll === documentHeight - windowHeight) {
+            $('.js-contact').addClass('link-selected');
+            $('.js-projects').removeClass('link-selected');
+        }
     });
 
-
 // Slide panels up/down when navbar links are clicked
-    if ($(window).width() >= 1100) {
-
+    if (windowWidth >= 1100) {
         // Hide all sections except welcome on page load
         $('.js-section').hide();
         $('.welcome').show();
-
         // When a navbar link is clicked, slide to correct panel
         $('.js-nav-link').on('click', function(){
             $('.js-nav-link').removeClass('js-selected');
             $(this).addClass('js-selected');
-
             if ($(this).hasClass('js-welcome')) {
                 $('.js-section').not('.welcome').slideUp(350);
             }
@@ -93,9 +96,5 @@ $(document).ready(function(){
                 $('.about, .experience, .projects, .contact').slideDown(350);
             }
         });
-
     }
-
-
-
 });
