@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     var navHeight = $('.navbar').height();
 
-// Change selected navbar item while scrolling
+// Change selected navbar item on touch
     if ($(window).width() < 1100) {
         $('.js-about').on('click', function(){
             $('html, body').animate({
@@ -25,6 +25,42 @@ $(document).ready(function(){
             });
         });
     }
+
+
+// Change highlighted navbar item on scroll
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        var welcome = $('.welcome').offset().top;
+        var about = $('.about').offset().top;
+        var experience = $('.experience').offset().top;
+        var projects = $('.projects').offset().top;
+        var contact = $('.contact').position().top + $('.contact').outerHeight();
+
+        console.log('scroll:' + scroll);
+        console.log('welcome:' + welcome);
+        console.log('about:' + about);
+        console.log('experience:' + experience);
+        console.log('projects:' + projects);
+        console.log('contact:' + contact);
+        if (scroll >= welcome) {
+            $('.js-nav-link').removeClass('link-selected');
+        }
+        if (scroll >= about - navHeight) {
+            $('.js-about').addClass('link-selected');
+        }
+        if (scroll >= experience - navHeight) {
+            $('.js-experience').addClass('link-selected');
+            $('.js-about').removeClass('link-selected');
+        }
+        if (scroll >= projects - navHeight) {
+            $('.js-projects').addClass('link-selected');
+            $('.js-experience').removeClass('link-selected');
+        }
+        if (scroll >= contact) {
+            $('.js-contact').addClass('link-selected');
+            $('.js-projects').removeClass('link-selected');
+        }
+    });
 
 
 // Slide panels up/down when navbar links are clicked
