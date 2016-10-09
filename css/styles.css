@@ -160,14 +160,14 @@ body {
   -webkit-transition: 150ms ease-in-out 50ms;*/
 }
 
-.link-selected,
 .navbar a:hover {
-  color: #FFF;
-  background: #EF233C;
+  font-style: italic;
 }
 
-.navbar a:active {
-  background: #D90429;
+.link-selected {
+  color: #FFF;
+  background: #EF233C;
+  /*font-style: italic*/
 }
 
 .navbar li:first-child {
@@ -478,6 +478,16 @@ MEDIA QUERIES
 
   .border {
     display: block;
+  }
+
+  .navbar a:hover {
+    color: #FFF;
+    background: #EF233C;
+  }
+
+  .navbar a:active {
+    color: #FFF;
+    background: #D90429;
   }
 
 

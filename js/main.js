@@ -1,27 +1,25 @@
 $(document).ready(function(){
 
-    var navHeight = $('.navbar').height();
-
 // Change selected navbar item on touch
     if ($(window).width() < 1100) {
         $('.js-about').on('click', function(){
             $('html, body').animate({
-                scrollTop: $('.about').offset().top - navHeight
+                scrollTop: $('.about').offset().top
             });
         });
         $('.js-experience').on('click', function(){
             $('html, body').animate({
-                scrollTop: $('.experience').offset().top - navHeight
+                scrollTop: $('.experience').offset().top
             });
         });
         $('.js-projects').on('click', function(){
             $('html, body').animate({
-                scrollTop: $('.projects').offset().top - navHeight
+                scrollTop: $('.projects').offset().top
             });
         });
         $('.js-contact').on('click', function(){
             $('html, body').animate({
-                scrollTop: $('.contact').offset().top - navHeight
+                scrollTop: $('.contact').offset().top
             });
         });
     }
@@ -29,19 +27,14 @@ $(document).ready(function(){
 
 // Change highlighted navbar item on scroll
     $(window).scroll(function(){
+        var navHeight = $('.navbar').height();
         var scroll = $(window).scrollTop();
         var welcome = $('.welcome').offset().top;
         var about = $('.about').offset().top;
         var experience = $('.experience').offset().top;
         var projects = $('.projects').offset().top;
-        var contact = $('.contact').position().top + $('.contact').outerHeight();
+        var contact = $('.contact').offset().top;
 
-        console.log('scroll:' + scroll);
-        console.log('welcome:' + welcome);
-        console.log('about:' + about);
-        console.log('experience:' + experience);
-        console.log('projects:' + projects);
-        console.log('contact:' + contact);
         if (scroll >= welcome) {
             $('.js-nav-link').removeClass('link-selected');
         }
@@ -56,7 +49,7 @@ $(document).ready(function(){
             $('.js-projects').addClass('link-selected');
             $('.js-experience').removeClass('link-selected');
         }
-        if (scroll >= contact) {
+        if (scroll >= contact - navHeight) {
             $('.js-contact').addClass('link-selected');
             $('.js-projects').removeClass('link-selected');
         }
