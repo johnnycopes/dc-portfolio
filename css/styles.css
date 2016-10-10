@@ -6,6 +6,7 @@ GLOBAL STYLES
 
 /*
 - fix wide screen width/short screen height (mobile turned sideways)
+- figure out good portfolio display (divide perhaps into two colums: 100 and 50/50, with 100 being the name and 50/50 being 'Live Demo' and 'GitHub')
 - refactor code and eliminate excessive styles
 - sub out fontawesome for ionicons
 
@@ -460,8 +461,8 @@ MEDIA QUERIES
 
   /* --- Entire page --- */
 
-  .body {
-    min-height: none;
+  body {
+    min-height: 0;
   }
 
   .border {
