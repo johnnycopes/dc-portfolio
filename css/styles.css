@@ -6,7 +6,7 @@ GLOBAL STYLES
 
 /*
 - fix wide screen width/short screen height (mobile turned sideways)
-- figure out good portfolio display (divide perhaps into two colums: 100 and 50/50, with 100 being the name and 50/50 being 'Live Demo' and 'GitHub')
+- refactor project tile code and make it responsive (touch for smaller screens instead of hover possible?)
 - refactor code and eliminate excessive styles
 - sub out fontawesome for ionicons
 
@@ -67,9 +67,9 @@ p {
 /* --- Clearfix --- */
 
 .cf:after {
-  content:" ";
-  display:block;
-  clear:both;
+  content: " ";
+  display: table;
+  clear: both;
 }
 
 
@@ -616,8 +616,79 @@ MEDIA QUERIES
 
   .project-tile {
     width: 33.33%;
+    color: #2B2D42;
+    position: relative;
   }
 
+  /* Top half of project tile */
+  .project-description {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 0 1rem;
+    height: 15rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+  }
+
+    .project-description h3 {
+      margin-top: 2rem;
+    }
+
+    .project-description p {
+      margin: 2.5px 0 0 0;
+    }
+
+  /* Bottom half of project tile */
+  .project-links {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+
+    .project-links span {
+      position: relative;
+      top: 40px;
+    }
+
+  .projects figure {
+    margin: 0;
+    position: relative;
+  }
+
+  .project-tile figcaption a {
+    float: left;
+    width: 50%;
+    text-align: center;
+    height: 100px;
+    display: inline-block;
+    background: #EDF2F4;
+    text-decoration: none;
+  }
+
+  .project-tile figcaption a:hover {
+    color: #FFF;
+    background: #EF233C;
+  }
+
+  .cs-style-1 figcaption {
+    position: absolute;
+    top: -1rem;
+    left: 0;
+  	height: 100%;
+    max-height: 250px;
+  	width: 100%;
+  	opacity: 0;
+  	text-align: center;
+  	backface-visibility: hidden;
+  	transition: transform 0.3s, opacity 0.3s;
+  }
+
+  .cs-style-1 figure:hover figcaption,
+  .cs-style-1 figure.cs-hover figcaption {
+  	opacity: 1;
+  	transform: translateY(1rem);
+  }
 
   /* --- Contact --- */
 
