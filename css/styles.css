@@ -12,7 +12,6 @@ GLOBAL STYLES
 
 */
 
-
 /* ------ Global tags ------ */
 
 * {
@@ -72,11 +71,9 @@ p {
   clear: both;
 }
 
-
 /*-------------------------------------
 SPECIFIC STYLES
 -------------------------------------*/
-
 
 /* ------ Entire page ------ */
 
@@ -97,7 +94,6 @@ body {
   height: 100%;
   background: #FFF;
 }
-
 
 /*-- Fixed border --- */
 
@@ -123,7 +119,6 @@ body {
 }
 .border-left { left: 0; }
 .border-right { right: 0; }
-
 
 /* ------ Navbar ------ */
 
@@ -167,7 +162,6 @@ body {
   font-style: italic;
 }
 
-
 /* ------ Main content area ------ */
 
 .content {
@@ -186,7 +180,6 @@ body {
 .js-section {
   z-index: 1;
 }
-
 
 /* --- Welcome (Hi) --- */
 
@@ -216,7 +209,6 @@ body {
   font: 8rem 'Bungee Shade', cursive;
 }
 
-
 /* --- About --- */
 
 .about {
@@ -236,12 +228,11 @@ body {
   margin: 1rem 0;
 }
 
-
 /* --- Experience --- */
 
 .job {
   margin: 0 auto 4rem;
-  max-width: 550px;
+  max-width: 55rem;
   text-align: left;
 }
 
@@ -259,7 +250,7 @@ body {
 
     .digitalcrafts-logo {
       width: 44%;
-      min-width: 200px;
+      min-width: 20rem;
     }
 
     .wunderman-logo {
@@ -271,7 +262,6 @@ body {
       margin: 2rem 0;
   }
 
-
 /* --- Projects --- */
 
 .projects {
@@ -282,12 +272,13 @@ body {
   margin: 1rem .5rem;
   display: inline-block;
   background: #EDF2F4;
-  max-width: 250px;
-  max-height: 250px;
+  max-width: 25rem;
+  max-height: 25rem;
 }
 
-.project-tile a {
-  display: block;
+.project-tile figure {
+  margin: 0;
+  position: relative;
 }
 
 .project-tile img {
@@ -295,6 +286,74 @@ body {
   width: 100%;
 }
 
+.project-tile-overlay {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  height: 100%;
+  max-height: 250px;
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+  backface-visibility: hidden;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.project-tile figure:hover .project-tile-overlay,
+.project-tile figure.cs-hover .project-tile-overlay {
+  opacity: 1;
+  transform: translateY(1rem);
+}
+
+/* Top half of project tile overlay */
+.project-description {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 0 1rem;
+  height: 15rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+  .project-description h3 {
+    margin-top: 2rem;
+  }
+
+  .project-description p {
+    margin: 2.5px 0 0 0;
+  }
+
+/* Bottom half of project tile overlay */
+.project-links {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+  .project-links span {
+    position: relative;
+    top: 40px;
+  }
+
+  .project-links a {
+    float: left;
+    width: 50%;
+    text-align: center;
+    height: 100px;
+    display: inline-block;
+    background: #EDF2F4;
+    text-decoration: none;
+  }
+
+  .project-links a:hover {
+    color: #FFF;
+    background: #EF233C;
+  }
+
+  .project-links a:active {
+    background: #D90429;
+  }
 
 /* --- Contact --- */
 
@@ -312,7 +371,6 @@ body {
   width: 33.33%;
   text-align: center;
 }
-
 
 /*-------------------------------------
 MEDIA QUERIES
@@ -395,7 +453,6 @@ MEDIA QUERIES
     padding: 2rem 4rem;
   }
 
-
   /* --- Main content area --- */
 
   .container {
@@ -422,7 +479,6 @@ MEDIA QUERIES
   .welcome h1 {
     font-size: 10rem;
   }
-
 
   /* --- About --- */
 
@@ -473,7 +529,6 @@ MEDIA QUERIES
     color: #FFF;
     background: #D90429;
   }
-
 
   /* --- Navbar --- */
 
@@ -606,7 +661,6 @@ MEDIA QUERIES
       padding: 2rem 12%;
     }
 
-
   /* --- Projects --- */
 
   .projects {
@@ -620,75 +674,7 @@ MEDIA QUERIES
     position: relative;
   }
 
-  /* Top half of project tile */
-  .project-description {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 0 1rem;
-    height: 15rem;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-  }
 
-    .project-description h3 {
-      margin-top: 2rem;
-    }
-
-    .project-description p {
-      margin: 2.5px 0 0 0;
-    }
-
-  /* Bottom half of project tile */
-  .project-links {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-  }
-
-    .project-links span {
-      position: relative;
-      top: 40px;
-    }
-
-  .projects figure {
-    margin: 0;
-    position: relative;
-  }
-
-  .project-tile figcaption a {
-    float: left;
-    width: 50%;
-    text-align: center;
-    height: 100px;
-    display: inline-block;
-    background: #EDF2F4;
-    text-decoration: none;
-  }
-
-  .project-tile figcaption a:hover {
-    color: #FFF;
-    background: #EF233C;
-  }
-
-  .cs-style-1 figcaption {
-    position: absolute;
-    top: -1rem;
-    left: 0;
-  	height: 100%;
-    max-height: 250px;
-  	width: 100%;
-  	opacity: 0;
-  	text-align: center;
-  	backface-visibility: hidden;
-  	transition: transform 0.3s, opacity 0.3s;
-  }
-
-  .cs-style-1 figure:hover figcaption,
-  .cs-style-1 figure.cs-hover figcaption {
-  	opacity: 1;
-  	transform: translateY(1rem);
-  }
 
   /* --- Contact --- */
 
@@ -711,11 +697,20 @@ MEDIA QUERIES
     text-align: center;
   }
 
+
 @media screen and (min-width: 1600px) {
 
   .project-tile {
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 30rem;
+    max-height: 30rem;
+  }
+
+  .project-tile-overlay {
+    max-height: 30rem;
+  }
+
+  .project-description {
+    height: 20rem;
   }
 
 }
