@@ -346,14 +346,20 @@ body {
     text-decoration: none;
   }
 
+  .project-links a:visited {
+    color: #2B2D42;
+  }
   .project-links a:hover {
     color: #FFF;
     background: #EF233C;
   }
 
   .project-links a:active {
+    color: #FFF;
     background: #D90429;
   }
+
+
 
 /* --- Contact --- */
 
