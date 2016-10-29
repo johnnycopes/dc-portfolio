@@ -294,8 +294,12 @@ body {
   max-height: 250px;
   width: 100%;
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
   backface-visibility: hidden;
+  background: rgba(0, 0, 0, 0.7);
   transition: transform 0.3s, opacity 0.3s;
 }
 
@@ -307,40 +311,31 @@ body {
 
 /* Top half of project tile overlay */
 .project-description {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 0 1rem;
-  height: 15rem;
-  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem 1rem 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   color: #fff;
 }
 
-  .project-description h3 {
-    margin-top: 2rem;
-  }
-
   .project-description p {
-    margin: 2.5px 0 0 0;
+    margin: 0;
   }
 
 /* Bottom half of project tile overlay */
-.project-links {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-}
-
   .project-links span {
     position: relative;
-    top: 40px;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%)
   }
 
   .project-links a {
     float: left;
     width: 50%;
     text-align: center;
-    height: 100px;
+    height: 75px;
     display: inline-block;
     background: #EDF2F4;
     text-decoration: none;
@@ -713,10 +708,6 @@ MEDIA QUERIES
 
   .project-tile-overlay {
     max-height: 30rem;
-  }
-
-  .project-description {
-    height: 20rem;
   }
 
 }
