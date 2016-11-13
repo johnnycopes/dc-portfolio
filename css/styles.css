@@ -380,6 +380,10 @@ body {
   text-decoration: none;
 }
 
+.social-icons a:visited {
+  color: #2B2D42;
+}
+
 .social-icons a:hover {
   color: #FFF;
   background: #EF233C;
