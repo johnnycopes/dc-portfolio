@@ -336,14 +336,14 @@ body {
   .project-links a:visited {
     color: #2B2D42;
   }
+
+  .project-links a:focus {
+    color: #2B2D42;
+  }
+
   .project-links a:hover {
     color: #FFF;
     background: #EF233C;
-  }
-
-  .project-links a:active {
-    color: #FFF;
-    background: #D90429;
   }
 
   .project-links::after {
@@ -687,6 +687,11 @@ MEDIA QUERIES
   .project-tile figure.cs-hover .project-tile-overlay {
     opacity: 1;
     transform: translateY(1rem);
+  }
+
+  .project-links a:active {
+    color: #FFF;
+    background: #D90429;
   }
 
   /* --- Contact --- */
