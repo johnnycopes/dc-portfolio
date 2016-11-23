@@ -1,29 +1,49 @@
-function page() {
+function pageFunctionality() {
   var windowWidth = $(window).width();
   $('.js-nav-link').off('click').removeClass('js-selected link-selected');
   $('.js-section').show();
 
   // Change selected navbar item on touch
   if (windowWidth < 1100) {
-    $('.js-about').on('click', function() {
-      $('html, body').animate({
-        scrollTop: $('.about').offset().top
-      });
+    var navHeight = $('.navbar').height(),
+        scroll = $(window).scrollTop(),
+        welcome = $('.welcome').offset().top,
+        about = $('.about').offset().top,
+        aboutHeight = $('.about').height(),
+        experience = $('.experience').offset().top,
+        projects = $('.projects').offset().top,
+        contact = $('.contact').offset().top,
+        documentHeight = $(document).height(),
+        windowHeight = $(window).height();
+
+    page('/about', function() {
+      if (scroll > about && scroll < aboutHeight) {
+        $('html, body').animate({
+          scrollTop: $('.about').offset().top
+        });
+      }
     });
-    $('.js-experience').on('click', function() {
+    page('/experience', function() {
       $('html, body').animate({
         scrollTop: $('.experience').offset().top
       });
     });
-    $('.js-projects').on('click', function() {
+    page('/projects', function() {
       $('html, body').animate({
         scrollTop: $('.projects').offset().top
       });
     });
-    $('.js-contact').on('click', function() {
+    page('/contact', function() {
       $('html, body').animate({
         scrollTop: $('.contact').offset().top
       });
+    });
+    page('/', function() {
+      console.log('jkf;dsj');
+    });
+    console.log('sanity check');
+    page({
+      hashbang: true
     });
   }
 
@@ -46,10 +66,12 @@ function page() {
       $('.js-about').addClass('link-selected');
     }
     if (scroll >= experience - navHeight) {
+      // page('/experience');
       $('.js-experience').addClass('link-selected');
       $('.js-about').removeClass('link-selected');
     }
     if (scroll >= projects - navHeight) {
+      page('/projects')
       $('.js-projects').addClass('link-selected');
       $('.js-experience').removeClass('link-selected');
     }
@@ -99,14 +121,14 @@ function page() {
 
 
 // initialize page
-page();
+pageFunctionality();
 
 // re-run the main function if window size passes 1100px mark
 $(window).bind('exitBreakpoint1100', function() {
-  page();
+  pageFunctionality();
 });
 $(window).bind('enterBreakpoint1100', function() {
-  page();
+  pageFunctionality();
 });
 
 $(window).setBreakpoints();
