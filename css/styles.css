@@ -270,8 +270,8 @@ body {
   margin: 1rem .5rem;
   display: inline-block;
   background: #EDF2F4;
-  max-width: 250px;
-  max-height: 250px;
+  max-width: 270px;
+  max-height: 270px;
 }
 
 .project-tile figure {
@@ -289,7 +289,7 @@ body {
   top: -1rem;
   left: 0;
   height: 100%;
-  max-height: 250px;
+  max-height: 270px;
   width: 100%;
   opacity: 0;
   display: flex;
@@ -517,7 +517,7 @@ MEDIA QUERIES
   }
 
   .projects .container {
-    max-width: 1000px;
+    max-width: 800px;
   }
 
 }
@@ -679,7 +679,7 @@ MEDIA QUERIES
   }
 
   .project-tile {
-    width: 33.33%;
+    width: 50%;
     color: #2B2D42;
     position: relative;
   }
@@ -713,6 +713,10 @@ MEDIA QUERIES
     font-size: 85%;
   }
 
+  body {
+    min-height: 670px;
+  }
+
   .about .container {
     max-width: 850px;
   }
@@ -728,6 +732,23 @@ MEDIA QUERIES
 
   .project-tile-overlay {
     max-height: 300px;
+  }
+
+}
+
+@media screen and (min-width: 1800px) {
+
+  body {
+    min-height: 730px;
+  }
+
+  .project-tile {
+    max-width: 330px;
+    max-height: 330px;
+  }
+
+  .project-tile-overlay {
+    max-height: 330px;
   }
 
 }
