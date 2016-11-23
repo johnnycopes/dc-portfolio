@@ -1,7 +1,8 @@
 function page() {
   var windowWidth = $(window).width();
-  $('.js-nav-link').off('click').removeClass('js-selected link-selected');
+  $('.js-nav-link').off('click').removeClass('link-selected js-selected');
   $('.js-section').show();
+  $('.js-welcome').addClass('js-selected');
 
   // Change selected navbar item on touch
   if (windowWidth < 1100) {
@@ -26,6 +27,10 @@ function page() {
       });
     });
   }
+
+  // Force hover on project tiles to show their descriptions and buttons
+  $('.project-tile figcaption').addClass('mobile-overlay');
+  // $('.project-tile figure').css('width', '3000px');
 
   // Change highlighted navbar item on scroll
   $(window).scroll(function() {
