@@ -470,7 +470,7 @@ MEDIA QUERIES
   }
 
   body {
-    min-height: 768px;
+    ght: 768px;
   }
 
   /* --- Navbar --- */
@@ -692,7 +692,8 @@ MEDIA QUERIES
 
   .projects {
     z-index: 4;
-    ight: 0;
+    min-height: 0;
+    right: 0;
   }
 
   .project-tile {
