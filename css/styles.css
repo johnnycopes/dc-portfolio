@@ -16,7 +16,7 @@ GLOBAL STYLES
   box-sizing: border-box;
 }
 
-body, main, h2, h3, ul {
+body, main, h2, h3, h4, h5, h6, ul {
   margin: 0;
 }
 
@@ -48,7 +48,12 @@ h2 {
 
 h3 {
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 400;
+  text-align: center;
+}
+
+h4 {
+  font-weight: 400;
   text-align: center;
 }
 
@@ -77,9 +82,6 @@ SPECIFIC STYLES
 
 body {
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-  -ms-animation: fadein 2s; /* Internet Explorer */
-  -o-animation: fadein 2s; /* Opera < 12.1 */
   animation: fadein 2s;
 }
 
@@ -150,15 +152,17 @@ body {
   display: inline-block;
 }
 
-.link-selected {
+.link-selected,
+.js-selected {
   color: #FFF;
   background: #EF233C;
 }
-
+/*
 .js-selected {
   font-weight: 700;
-  font-style: italic;
-}
+  color: #FFF;
+  background: #EF233C;
+}*/
 
 /* ------ Main content area ------ */
 
@@ -232,10 +236,15 @@ body {
   margin: 0 auto 4rem;
   max-width: 55rem;
   text-align: left;
+  vertical-align: top;
 }
 
   .company-logo {
     text-align: center;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .company-logo img {
@@ -253,12 +262,18 @@ body {
 
     .wunderman-logo {
       width: 100%;
-      max-width: 250px;
+      max-width: 280px;
     }
 
-  .job-description {
-      margin: 2rem 0;
-  }
+.job-description .header,
+.job-description .cv {
+  margin: 2rem 0 0;
+}
+
+.job-description .cv {
+  padding-left: 1rem;
+  list-style: circle;
+}
 
 /* --- Projects --- */
 
@@ -330,6 +345,7 @@ body {
     height: 65px;
     display: inline-block;
     background: #EDF2F4;
+    color: #2B2D42;
     text-decoration: none;
   }
 
@@ -503,6 +519,10 @@ MEDIA QUERIES
     min-height: 900px;
   }
 
+  .experience .container {
+
+  }
+
   /* --- Projecs --- */
 
   .projects {
@@ -660,10 +680,9 @@ MEDIA QUERIES
     display: inline-block;
   }
 
-    .job-description {
-      margin: 0;
-      padding: 2rem 2rem 0;
-    }
+  .job-description {
+    padding: 0 2rem;
+  }
 
   /* --- Projects --- */
 
