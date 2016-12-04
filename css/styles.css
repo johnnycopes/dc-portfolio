@@ -2,14 +2,6 @@
 GLOBAL STYLES
 -------------------------------------*/
 
-/* NOTE: to-do list: */
-
-/*
-- fix wide screen width/short screen height (mobile turned sideways)
-- refactor project tile code and make it responsive (touch for smaller screens instead of hover possible?)
-
-*/
-
 /* ------ Global tags ------ */
 
 * {
@@ -28,7 +20,7 @@ html {
 body {
   height: 100%;
   font-size: 1.5rem;
-  font-family: 'Cousine', monospace;
+  font-family: 'Maven Pro', monospace;
   color: #2B2D42;
   line-height: 1.5;
 }
@@ -48,12 +40,12 @@ h2 {
 
 h3 {
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 500;
   text-align: center;
 }
 
 h4 {
-  font-weight: 400;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -271,7 +263,7 @@ body {
 }
 
 .job-description .cv {
-  padding-left: 1rem;
+  padding-left: 2rem;
   list-style: circle;
 }
 
