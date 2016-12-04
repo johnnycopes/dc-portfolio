@@ -240,10 +240,10 @@ body {
 }
 
   .company-logo {
-    text-align: center;
     height: 80px;
+    text-align: center;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
   }
 
@@ -672,6 +672,10 @@ MEDIA QUERIES
 
   .experience .container {
     width: 90%;
+  }
+
+  .company-logo {
+    align-items: center;
   }
 
   .job {
