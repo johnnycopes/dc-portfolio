@@ -1,1 +1,1 @@
-Personal portfolio revamp. Will be under construction for the duration of my bootcamp attendance.
+Custom-built portfolio site built with HTML, CSS, JavaScript, and jQuery.
